@@ -7,7 +7,7 @@ This is simple package with function `proximitySearchArray` that allows you to r
 ## Installation
 
 ```
-npm install proximity-search array
+npm install proximity-search-array
 ```
 
 ## Example
@@ -15,7 +15,7 @@ npm install proximity-search array
 Just import the function where you want to use it:
 
 ```
-import proximitySearchArray from 'proximity-search-array
+import proximitySearchArray from 'proximity-search-array'
 ```
 
 Perform proximity search:
