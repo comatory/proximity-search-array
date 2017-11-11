@@ -1,6 +1,6 @@
 {
   "name": "proximity-search-array",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utility for getting nearby items from array.",
   "main": "index.js",
   "scripts": {
