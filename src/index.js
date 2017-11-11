@@ -10,6 +10,8 @@ export default function proximitySearchArray(
       prioritizeLeft: false,
     }) {
 
+  options.safe === undefined ? options.safe = true : options.safe
+
   if (!options.safe) {
     console.warn('You are using unsafe mode! You are risking getting wrong ' +
                  'results because input checking is turned off')
