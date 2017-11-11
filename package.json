@@ -4,6 +4,7 @@
   "description": "Utility for getting nearby items from array.",
   "main": "index.js",
   "scripts": {
+    "flow": "./node_modules/.bin/flow",
     "test": "./node_modules/.bin/jest",
     "build": "./node_modules/.bin/babel ./src/index.js --out-file index.js",
     "build:watch": "./node_modules/.bin/babel ./src/index.js --out-file index.js --watch"

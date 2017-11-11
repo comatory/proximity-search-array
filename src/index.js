@@ -1,14 +1,19 @@
 // @flow
 
+type Options = {
+  safe?: boolean,
+  prioritizeLeft?: boolean,
+}
+
 // comment
 export default function proximitySearchArray(
-    collection: Array,
+    collection: Array<any>,
     index: number, 
     amount: number,
-    options = {
+    options?: Options = {
       safe: true,
       prioritizeLeft: false,
-    }) {
+    }): Array<any> {
 
   options.safe === undefined ? options.safe = true : options.safe
 
@@ -36,17 +41,22 @@ export default function proximitySearchArray(
   return getResult(collection, index, amount, options)
 }
 
-const getResult = (collection, index, amount, options) => {
+const getResult = (
+  collection: Array<any>,
+  index: number,
+  amount: number,
+  options: Options
+ ) => {
   const { prioritizeLeft } = options
-  let side = prioritizeLeft ? Math.ceil(amount / 2) : Math.floor(amount / 2)
+  let side: number = prioritizeLeft ? Math.ceil(amount / 2) : Math.floor(amount / 2)
 
-  let startIndex = Math.max(0, index - side)
+  let startIndex: number = Math.max(0, index - side)
 
   if (startIndex + amount + 1 > collection.length) {
     startIndex = Math.max(0, collection.length - 1 - amount)
   }
 
-  const endIndex = Math.max(0, startIndex + amount)
+  const endIndex: number = Math.max(0, startIndex + amount)
 
   return collection.slice(startIndex, endIndex + 1) // NOTE: Include last item 
 }
