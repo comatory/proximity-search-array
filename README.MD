@@ -4,7 +4,21 @@ This is simple package with function `proximitySearchArray` that allows you to r
 
 `proximitySearchArray(collection: Array<any>, index: number, amount: number, options?: { safe?: boolean, prioritizeLeft?: boolean }): Array<any>`
 
+## Installation
+
+```
+npm install proximity-search array
+```
+
 ## Example
+
+Just import the function where you want to use it:
+
+```
+import proximitySearchArray from 'proximity-search-array
+```
+
+Perform proximity search:
 
 ```
   const array = ['a', 'b', 'c', 'd', 1, 2, 3, 4]
@@ -26,6 +40,13 @@ You can prioritize the left side by passing a flag in options argument:
 ```
 proximitySearchArray(array, 3, 3, { prioritizeLeft: true })
 // [ 'b', 'c', 'd', 1 ]
+```
+
+The function will always return requested amount of items plus the item on the index if possible. You do not have to worry if you are on the edge of the array, the items that would otherwise precede the item at the index will instead be shifted:
+
+```
+proximitySearchArray(array, 1, 4)
+// [ 'a', 'b', 'c', 'd', 1 ]
 ```
 
 ## Development
