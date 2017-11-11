@@ -1,4 +1,4 @@
-import proximitySearchArray from '../index.js'
+import proximitySearchArray from '../src/index.js'
 
 describe('Proximity Search Array', () => {
   
